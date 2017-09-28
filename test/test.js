@@ -61,4 +61,26 @@ describe('.toArray', function(){
     var sb = new StringBuilder("foo bar");
     expect(sb.toArray()).to.deep.equal(["foo", "bar"]);
   });
+});
+
+describe('.append', function(){
+  it('append should be a function', function(){
+    var sb = new StringBuilder("foo bar");
+    expect(sb.append).to.be.a('function');
+  });
+  it('should take in a string', function(){
+    var sb = new StringBuilder("foo bar");
+    expect(sb.append("baz")).to.equal("foo bar baz");
+  });
+  it('should return a new string with input appended', function(){
+    var sb = new StringBuilder("foo bar");
+    expect(sb.append("baz")).to.equal("foo bar baz");
+  });
+});
+
+describe('.toString', function(){
+  it('should be a function', function(){
+    var sb = new StringBuilder("foo bar");
+    expect(sb.toString).to.be.a('function');
+  })
 })

@@ -30,6 +30,18 @@ class StringBuilder {
     return splitString;
   }
 
+  append(baz){
+    if(typeof baz !== "string"){
+      throw new TypeError("input needs to be a string");
+    }
+    let bazString = this.string.concat(" " + baz);
+    return bazString;
+  }
+
+  toString(){
+
+  }
+
 }
 
 
