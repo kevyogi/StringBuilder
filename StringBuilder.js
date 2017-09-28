@@ -14,7 +14,21 @@ class StringBuilder {
     return revString;
   }
 
+  capitalize(){
+    let splitString = this.string.split(" ");
+    for(let i = 0; i < splitString.length; i++){
+      let letters = splitString[i].split("");
+      letters[0] = letters[0].toUpperCase();
+      splitString[i] = letters.join("");
+    }
+    let capString = splitString.join(" ");
+    return capString;
+  }
 
+  toArray(){
+    let splitString = this.string.split(" ");
+    return splitString;
+  }
 
 }
 
