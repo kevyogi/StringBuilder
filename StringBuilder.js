@@ -3,7 +3,7 @@ class StringBuilder {
     this.string = string;
   }
 
-  toString(){
+  trimString(){
     return this.string.trim();
   }
 
